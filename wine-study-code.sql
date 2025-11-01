@@ -45,17 +45,17 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
--- Load Kaggle Wine Reviews data into wine_data_clean
-LOAD DATA LOCAL INFILE '/Users/camillascandola/Desktop/sql-wine-study/winemag-data-130k-v2.csv'
+-- Load Kaggle Wine Reviews data into winemag_data_clean
+LOAD DATA LOCAL INFILE '/Users/camillascandola/Desktop/sql-wine-study/winemag_data_clean.csv'
 INTO TABLE wine_data_clean
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"' 
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-SELECT COUNT(*) FROM wine_dataset;
-SELECT COUNT(*) FROM wine_data_clean;
+SELECT COUNT(*) FROM sql_wine_study.wine_dataset;
+SELECT COUNT(*) FROM sql_wine_study.winemag_data_clean;
 
-SELECT * FROM wine_dataset LIMIT 5;
-SELECT * FROM wine_data_clean LIMIT 5;
+SELECT * FROM sql_wine_study.wine_dataset LIMIT 5;
+SELECT * FROM winemag_data_clean LIMIT 5;
 
